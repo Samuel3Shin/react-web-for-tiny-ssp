@@ -30,7 +30,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {/* Here we assume that the ad content is in ad.seatbid[0].bid[0].adid, modify it to reflect your actual ad structure */}
+        {/* Display the ad markup */}
+        {ad && <div dangerouslySetInnerHTML={{ __html: ad.seatbid[0].bid[0].adm }} />}
         <div>Ad ID: {ad && ad.seatbid[0].bid[0].adid}</div>
         <div>Price: {ad && ad.seatbid[0].bid[0].price}</div>
         <div>Impression URL: {ad && ad.seatbid[0].bid[0].nurl}</div>
