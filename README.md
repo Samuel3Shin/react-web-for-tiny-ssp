@@ -1,14 +1,14 @@
 # React-Web-for-Tiny-SSP
 
-This is a simple web application developed using React to demonstrate the functioning of Tiny-SSP-with-Open-RTB-spec project. It interacts with the SSP to request an ad, then displays the ad response.
+This is a simple web application developed using React to demonstrate the functioning of [Tiny-SSP-with-Open-RTB-spec project](https://github.com/Samuel3Shin/Tiny-SSP-with-Open-RTB-spec). It interacts with the SSP to request an ad, then displays the ad response. It triggers an impression pixel upon ad display.
 
 ## Description
 
-The application makes a POST request to the `/bid` endpoint of the SSP server with an example bid request payload. It then receives the bid response, and displays the returned ad.
+The application makes a POST request to the `/bid` endpoint of the SSP server with an example bid request payload. It then receives the bid response, and displays the returned ad while triggering an impression pixel.
 
 ## Code Structure
 
-The main component is `App`, which is defined in `src/App.js`. In this file, the `useEffect` hook is used to make a POST request to the SSP server as soon as the component is mounted. 
+The main component is `App`, which is defined in `src/App.js`. In this file, the `useEffect` hook is used to make a POST request to the SSP server as soon as the component is mounted.
 
 The `useState` hook is used to maintain three pieces of state: 
 
@@ -18,9 +18,10 @@ The `useState` hook is used to maintain three pieces of state:
 
 ## How to Run
 
-Before running the React application, ensure that the SSP server is running and accessible at `http://localhost:8080`. You can start the SSP server by running `docker-compose up` from the root directory of the Tiny-SSP-with-Open-RTB-spec project.
+Before running the React application, ensure that the SSP server is running and accessible at `http://localhost:8080`. You can start the SSP server by running `docker-compose up` from the root directory of the [Tiny-SSP-with-Open-RTB-spec project](https://github.com/Samuel3Shin/Tiny-SSP-with-Open-RTB-spec).
 
 Then, you can start the React application by running the following commands from the root directory of this project:
+Make sure you have installed Docker in your machine.
 
 ```bash
 docker-compose build --no-cache
