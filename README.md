@@ -21,6 +21,7 @@ The `useState` hook is used to maintain three pieces of state:
 Before running the React application, ensure that the SSP server is running and accessible at `http://localhost:8080`. You can start the SSP server by running `docker-compose up` from the root directory of the [Tiny-SSP-with-Open-RTB-spec project](https://github.com/Samuel3Shin/Tiny-SSP-with-Open-RTB-spec).
 
 Then, you can start the React application by running the following commands from the root directory of this project:
+
 Make sure you have installed Docker in your machine.
 
 ```bash

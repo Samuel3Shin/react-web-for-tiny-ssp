@@ -10,9 +10,12 @@ function App() {
   useEffect(() => {
     async function fetchAd() {
       try {
+        const id = Math.floor(Math.random() * 10) + 1;
+        const banner = id % 2 === 0 ? { w: 1660, h: 260 } : { w: 840, h: 480 };
+
         const response = await axios.post('http://localhost:8080/bid', {
-          id: '1',
-          imp: [{ id: 'imp1', banner: { w: 300, h: 250 } }],
+          id: id.toString(),
+          imp: [{ id: `imp${id}`, banner: banner }],
         });
         setAd(response.data);
         setLoading(false);
@@ -23,6 +26,7 @@ function App() {
     }
     fetchAd();
   }, []);
+
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
